@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 
+import NavBar from "./Components/NavBar";
 import SignupPage from "./Components/SignupPage";
 import LoginPage from "./Components/LoginPage";
 
@@ -39,7 +40,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Hello World</h1>
+            <NavBar user={user} handleLogout={handleLogout} />
             <Routes>
                 <Route path="/signup" element={<SignupPage />} />
                 <Route path="/login" element={<LoginPage handleLogin={handleLogin} user={user}/>} />
