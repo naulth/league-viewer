@@ -37,3 +37,8 @@ if __name__ == '__main__':
                 {"name": "Deathbringer Stance", "id": "AatroxPassive", "description": "Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health.", "image": "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/Aatrox_Passive.png"}
             ]
         )
+
+        champions = [Aatrox]
+
+        db.session.add_all(champions)
+        db.session.commit()
