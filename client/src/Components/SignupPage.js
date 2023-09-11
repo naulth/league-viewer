@@ -67,14 +67,14 @@ function SignupPage() {
                 <div className="flex flex-col justify-center px-6 py-12 lg:px-8">
                     <div className="text-center">
                         <div className="py-12">
-                            <h1 className="mt-10 text-center text-8xl font-bold leading-9 tracking-tight text-lime-300">
+                            <h1 className="mt-10 text-center text-8xl font-bold leading-9 tracking-tight text-black">
                                 League Viewer
                             </h1>
                         </div>
-                        <h2 className="my-10 text-center text-4xl font-bold leading-9 tracking-tight text-lime-200">
+                        <h2 className="my-10 text-center text-4xl font-bold leading-9 tracking-tight text-black">
                             Create Your New Account
                         </h2>
-                        <p className="block text-md font-medium leading-6 text-lime-100">
+                        <p className="block text-md font-medium leading-6 text-black">
                             Please ensure all fields are complete and valid.
                         </p>
                     </div>
@@ -86,7 +86,7 @@ function SignupPage() {
                             >
                                 <div className="grid grid-cols-4 gap-4">
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Username
                                         </label>
                                         <div className="mt-2">
@@ -95,7 +95,7 @@ function SignupPage() {
                                                 name="username"
                                                 value={formik.values.username}
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md bg-lime-100 border-0 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md bg-gray-200 border-0 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -104,7 +104,7 @@ function SignupPage() {
                                         </div>
                                     </div>
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Date of Birth
                                         </label>
                                         <div className="mt-2">
@@ -113,7 +113,7 @@ function SignupPage() {
                                                 name="birthDate"
                                                 value={formik.values.birthDate}
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md border-0 bg-lime-100 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md border-0 bg-gray-200 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -122,7 +122,7 @@ function SignupPage() {
                                         </div>
                                     </div>
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             First Name
                                         </label>
                                         <div className="mt-2">
@@ -131,7 +131,7 @@ function SignupPage() {
                                                 name="first_name"
                                                 value={formik.values.first_name}
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md border-0 bg-lime-100 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md border-0 bg-gray-200 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -140,7 +140,7 @@ function SignupPage() {
                                         </div>
                                     </div>
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Last Name
                                         </label>
                                         <div className="mt-2">
@@ -149,7 +149,7 @@ function SignupPage() {
                                                 name="last_name"
                                                 value={formik.values.last_name}
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md border-0 bg-lime-100 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md border-0 bg-gray-200 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -159,7 +159,7 @@ function SignupPage() {
                                     </div>
 
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Password
                                         </label>
                                         <div className="z-0 relative w-full">
@@ -173,7 +173,7 @@ function SignupPage() {
                                                     onChange={
                                                         formik.handleChange
                                                     }
-                                                    className="block w-full rounded-md bg-lime-100 border-0 py-1.5 px-4 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                    className="block w-full rounded-md bg-gray-200 border-0 py-1.5 px-4 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                                 />
                                                 <p className="formikReqs">
                                                     {" "}
@@ -183,7 +183,7 @@ function SignupPage() {
                                         </div>
                                     </div>
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Confirm Password
                                         </label>
                                         <div className="mt-2">
@@ -192,7 +192,7 @@ function SignupPage() {
                                                 name="confirm"
                                                 value={formik.values.confirm}
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md border-0 bg-lime-100 py-1.5 px-4 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md border-0 bg-gray-200 py-1.5 px-4 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -201,7 +201,7 @@ function SignupPage() {
                                         </div>
                                     </div>
                                     <div className="col-span-2">
-                                        <label className="block text-sm font-medium leading-6 text-lime-100">
+                                        <label className="block text-sm font-medium leading-6 text-black">
                                             Profile Image URL
                                         </label>
                                         <div className="mt-2">
@@ -212,7 +212,7 @@ function SignupPage() {
                                                     formik.values.profileImage
                                                 }
                                                 onChange={formik.handleChange}
-                                                className="block w-full rounded-md border-0 bg-lime-100 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                                className="block w-full rounded-md border-0 bg-gray-200 px-4 py-1.5 text-zinc-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
                                             <p className="formikReqs">
                                                 {" "}
@@ -223,7 +223,7 @@ function SignupPage() {
                                     <input
                                         type="submit"
                                         name="submit"
-                                        className="w-full col-span-2 h-9 justify-center rounded-md bg-lime-300 mt-8 px-3 py-1.5 text-lg font-semibold leading-6 text-zinc-950 shadow-sm hover:bg-lime-100 hover:text-zinc-950"
+                                        className="w-full col-span-2 h-9 justify-center rounded-md bg-lime-300 mt-8 px-3 py-1.5 text-lg font-semibold leading-6 text-zinc-950 shadow-sm hover:bg-gray-200 hover:text-zinc-950"
                                     />
                                 </div>
                             </form>
