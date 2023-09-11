@@ -130,46 +130,57 @@ class User (db.Model, SerializerMixin):
         return sum(bytearray(input, encoding='utf-8'))
     
 
-# class Game(db.Model, SerializerMixin):
-#     __tablename__ = 'games'
+class Champion(db.Model, SerializerMixin):
+    __tablename__ = 'champions'
 
-#     serialize_rules = ()
+    serialize_rules = ()
 
-#     id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String, nullable = False)
+    title = db.Column(db.String, nullable = False)
+    image = db.Column(db.String, nullable = False)
+    loading_image = db.Column(db.String, nullable = False)
+    lore = db.Column(db.String, nullable = False)
 
-#     title = db.Column(db.String, nullable = False)
-#     image = db.Column(db.String, nullable = False)
-#     genre = db.Column(db.String, nullable = False)
-#     platform = db.Column(db.String, nullable = False)
-#     price = db.Column(db.Float, nullable = False)
-
-#     comments = db.relationship('Comment', backref = 'game')
-
-#     @validates('title', 'genre', 'image', 'platform')
-#     def validate_game_info(self, key, value):
-#         if len(value) < 1:
-#             raise ValueError('Field cannot be empty.')
-#         return value
-    
-#     @validates('price')
-#     def validate_price(self, key, value):
-#         try:
-#             float(value)
-#         except ValueError:
-#             raise ValueError('Price must be a float.')
-#         return value
+    skins = db.relationship('Skin', backref = 'champion')
+    spells = db.relationship('Spell', backref = 'champion')
     
 
-#     # def game_dict(self):
-#     #     return {
-#     #         "id": self.id,
-#     #         "title": self.title,
-#     #         "image": self.image,
-#     #         "genre": self.genre,
-#     #         "platform": self.platform,
-#     #         "price": self.price,
-#     #         "comments": [comment.to_dict() for comment in self.comments]
-#     #     }
+    def champion_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "title": self.title,
+            "image": self.image,
+            "loading_image": self.loading_image,
+            "lore": self.lore,
+            "skins": [skin.to_dict() for skin in self.skins],
+            "spells": [spell.to_dict() for spell in self.spells]
+        }
+    
+class Skin(db.Model, SerializerMixin):
+    __tablename__ = "skins"
+
+    serialize_rules = ()
+
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String, nullable = False)
+    image = db.Column(db.String, nullable = False)
+
+    champion_id = db.Column(db.String, db.ForeignKey('champions.id'))
+
+class Spell(db.Model, SerializerMixin):
+    __tablename__ = "spells"
+
+    serialize_rules = ()
+
+    id = db.Column(db.String, primary_key = True)
+    name = db.Column(db.String, nullable = False)
+    description = db.Column(db.String, nullable = False)
+    image = db.Column(db.String, nullable = False)
+
+    champion_id = db.Column(db.String, db.ForeignKey('champions.id'))
+
 
 
 # class Comment(db.Model, SerializerMixin):
