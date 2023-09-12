@@ -5,12 +5,15 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 import { UserProvider } from "./Context/user";
+import { ChampionsArrayProvider } from "./Context/championsArray";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-        <UserProvider>
-            <App />
-        </UserProvider>
+        <ChampionsArrayProvider>
+            <UserProvider>
+                <App />
+            </UserProvider>
+        </ChampionsArrayProvider>
     </BrowserRouter>
 );

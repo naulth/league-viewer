@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import SignupPage from "./Components/SignupPage";
 import LoginPage from "./Components/LoginPage";
+import Roster from "./Components/Roster";
 
 import {UserContext} from "./Context/user"
 
@@ -44,6 +45,7 @@ function App() {
             <Routes>
                 <Route path="/signup" element={<SignupPage />} />
                 <Route path="/login" element={<LoginPage handleLogin={handleLogin} user={user}/>} />
+                <Route path="/roster" element={<Roster />} />
             </Routes>
         </div>
     );

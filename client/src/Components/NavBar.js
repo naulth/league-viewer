@@ -24,34 +24,9 @@ function NavBar({ handleLogout }) {
                     {user ? (
                         <NavLink
                             className="text-lg font-semibold leading-6 text-lime-100"
-                            to="/feed"
+                            to="/roster"
                         >
-                            Feed
-                        </NavLink>
-                    ) : null}
-                    {user ? (
-                        <NavLink
-                            className="text-lg font-semibold leading-6 text-lime-100"
-                            to="/users"
-                            end
-                        >
-                            Users
-                        </NavLink>
-                    ) : null}
-                    {user ? (
-                        <NavLink
-                            className="text-lg font-semibold leading-6 text-lime-100"
-                            to="/profile"
-                        >
-                            Profile
-                        </NavLink>
-                    ) : null}
-                    {user ? (
-                        <NavLink
-                            className="text-lg font-semibold leading-6 text-lime-100"
-                            to="/games"
-                        >
-                            Games
+                            Roster
                         </NavLink>
                     ) : null}
                 </div>
