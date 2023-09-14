@@ -114,7 +114,7 @@ function ChampionPage() {
                 <div className="grid grid-cols-7">
                     <div className="col-span-2 h-1/2">
                         <h2 className="text-6xl text-slate-200 pb-20">Available Skins</h2>
-                        <ChampionSkinsList skinData={skinData} setSelectedSkin={setSelectedSkin} />
+                        <ChampionSkinsList skinData={skinData} selectedSkin={selectedSkin} setSelectedSkin={setSelectedSkin} />
                     </div>
                     
                     <div className="col-span-5">

@@ -9,8 +9,8 @@ function ChampionSkinNameCard({name, setSelectedSkin}) {
     }
 
     return(
-        <div className="py-2 my-2">
-            <h1 onClick={handleClick} className="text-slate-200 text-xl">{capName}</h1>
+        <div onClick={handleClick} className="py-2 my-2" data-skin={name}>
+            <h1  className="text-slate-200 text-xl">{capName}</h1>
         </div>
 
     )
