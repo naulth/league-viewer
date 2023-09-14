@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar";
 import SignupPage from "./Components/SignupPage";
 import LoginPage from "./Components/LoginPage";
 import Roster from "./Components/Roster";
+import ChampionPage from "./Components/ChampionPage";
 
 import {UserContext} from "./Context/user"
 
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/signup" element={<SignupPage />} />
                 <Route path="/login" element={<LoginPage handleLogin={handleLogin} user={user}/>} />
                 <Route path="/roster" element={<Roster />} />
+                <Route path="/roster/:championId" element={<ChampionPage />} />
             </Routes>
         </div>
     );

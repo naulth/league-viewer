@@ -4,7 +4,7 @@ function RosterCard({ name, title, image }) {
 
     const imageName = image.replace(".png", "");
 
-    const linkURL = `http://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion/${imageName}.json`
+    const linkURL = `/roster/${imageName}`
 
     return (
         <div className="mx-2 mt-6 flex flex-col self-start rounded-lg bg-white shadow-lg dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
@@ -15,7 +15,7 @@ function RosterCard({ name, title, image }) {
                     alt={name}
                 />
             </Link>
-            <Outlet/>
+            
             <div className="p-6">
                 <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                     {name}
@@ -24,6 +24,7 @@ function RosterCard({ name, title, image }) {
                     {title}
                 </p>
             </div>
+            <Outlet/>
         </div>
     );
 }

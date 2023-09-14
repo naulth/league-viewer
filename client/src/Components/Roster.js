@@ -25,10 +25,7 @@ function Roster() {
     const championCards = championsArray.map(champion => <RosterCard key={champion.id} id={champion.id} name={champion.name} title={champion.title} image={champion.image?.full} />)
 
     return(
-        <div>
-            <div>
-                <h1>Champion Roster</h1>
-            </div>
+        <div className="bg-gray-950">
             <div className="grid-cols-4 justify-items-center max-w-7xl mx-auto grid">
                 {championCards}
             </div>
