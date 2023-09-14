@@ -3,6 +3,8 @@ import { useEffect, useContext, useState } from "react";
 
 import ChampionSpellCard from "./ChampionSpellCard";
 import ChampionPassiveCard from "./ChampionPassiveCard";
+import ChampionSkinCarousel from "./ChampionSkinCarousel";
+import ChampionSkinsList from "./ChampionSkinList";
 
 import { ChampionContext } from "../Context/champion";
 
@@ -40,7 +42,7 @@ function ChampionPage() {
         />
     );
 
-    const abilityComponents = champion.spells?.map((spell) =>
+    champion.spells?.map((spell) =>
         abilityGroup.push(
             <ChampionSpellCard
                 key={spell.id}
@@ -50,6 +52,20 @@ function ChampionPage() {
             />
         )
     );
+
+    const skinImageUrl = `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champId}_`;
+
+    const skinData = champion?.skins?.map(skin => {
+        const num = skin.num
+        const name = skin.name
+        const imageUrl = `${skinImageUrl}${num}.jpg`
+
+        return {name, imageUrl}
+
+    })
+
+    const [selectedSkin, setSelectedSkin] = useState(null)
+    
 
     return (
         <div className="bg-gray-950 h-max px-10 py-20">
@@ -94,8 +110,17 @@ function ChampionPage() {
                     </div>
                 </div>
             </div>
-            <div>
-                
+            <div className="pt-24 px-20">
+                <div className="grid grid-cols-7">
+                    <div className="col-span-2 h-1/2">
+                        <h2 className="text-6xl text-slate-200 pb-20">Available Skins</h2>
+                        <ChampionSkinsList skinData={skinData} setSelectedSkin={setSelectedSkin} />
+                    </div>
+                    
+                    <div className="col-span-5">
+                        <ChampionSkinCarousel skinData={skinData} selectedSkin={selectedSkin}/>
+                    </div>
+                </div>
             </div>
         </div>
     );

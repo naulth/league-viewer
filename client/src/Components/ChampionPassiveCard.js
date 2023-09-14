@@ -1,4 +1,4 @@
-import {useEFfect, useEffect} from 'react'
+import {useEffect} from 'react'
 
 
 function ChampionPassiveCard({champion, setActiveAbilityText}) {
@@ -16,7 +16,7 @@ function ChampionPassiveCard({champion, setActiveAbilityText}) {
 
     useEffect(() => {
         setActiveAbilityText(cleanedDescription)
-    },[cleanedDescription])
+    },[cleanedDescription, setActiveAbilityText])
 
     return(
 
